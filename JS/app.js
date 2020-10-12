@@ -39,5 +39,20 @@
             }
         };
     });
-
 })();
+
+(function() {
+    'use strict';
+
+    angular.module('DIApp', [])
+    .controller('DIController', DIController);
+
+    function DIController ($scope, $filter){
+        $scope.name = "Siddharth";
+        $scope.upper = function () {
+            var uCase = $filter('uppercase');
+            $scope.name = uCase($scope.name); 
+        };
+    };
+
+}) ();
