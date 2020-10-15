@@ -41,18 +41,57 @@
     });
 })();
 
-(function() {
+// (function() {
+//     'use strict';
+
+//     angular.module('DIApp', [])
+//     .controller('DIController', DIController);
+
+//     function DIController ($scope, $filter){
+//         $scope.name = "Siddharth";
+//         $scope.upper = function () {
+//             var uCase = $filter('uppercase');
+//             $scope.name = uCase($scope.name); 
+//         };
+//     }
+// }) ();
+
+// (function() {
+//     'use strict';
+
+//     angular.module('DIApp', [])
+//     .controller('DIController', DIController);
+//     DIController.$inject = ['$scope','$filter'];
+
+//     function DIController ($scope, $filter){
+//         $scope.name = "Siddharth";
+//         $scope.upper = function () {
+//             var uCase = $filter('uppercase');
+//             $scope.name = uCase($scope.name); 
+//         };
+//     }
+// }) ();
+
+//Minified JS
+!function(){"use strict";function e(e,n){e.name="Siddharth",e.upper=function()
+{var r=n("uppercase");e.name=r(e.name)}}angular.module("DIApp",[]).controller("DIController",e),e.$inject=["$scope","$filter"]}();
+
+(function () {
     'use strict';
+    angular.module('MsgApp', [])
+    .controller('MsgController', MsgController);
 
-    angular.module('DIApp', [])
-    .controller('DIController', DIController);
+    MsgController.$inject = ['$scope'];
 
-    function DIController ($scope, $filter){
+    function MsgController($scope) {
         $scope.name = "Siddharth";
-        $scope.upper = function () {
-            var uCase = $filter('uppercase');
-            $scope.name = uCase($scope.name); 
+        $scope.PSState = "no";
+        $scope.sayMsg = function () {
+            return "Siddharth wants a PS5!";
         };
-    };
 
+        $scope.givePS5 = function () {
+            $scope.PSState = "";
+        }
+    }   
 }) ();
