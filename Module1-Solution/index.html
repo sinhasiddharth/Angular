@@ -9,7 +9,7 @@
 </head>
 <body>
     <div ng-controller="LunchCheckController">
-        <input type="text" ng-model="lunch">
+        <input type="text" ng-model="lunch">(empty items are not considered for e.g. ', ,' or ',,')
         <br/>
         <button ng-click="checktoomuch()">Check if too much</button>
         <br/>
